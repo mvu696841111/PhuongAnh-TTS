@@ -1,0 +1,48 @@
+# phuonganh-tts configuration
+# Vietnamese Text-to-Speech — Powered by phuonganh-tts-TTS
+#
+# This file controls which models are available in the UI.
+# The first model listed becomes the default when the app starts.
+
+text_settings:
+  max_chars_per_chunk: 256
+  max_total_chars_streaming: 3000
+
+# Default bundled model — auto-loaded on startup
+default_model: "phuonganh-tts-TTS-v2 (GPU)"
+
+backbone_configs:
+  "phuonganh-tts-TTS-v2 (GPU)":
+    repo: Nemmer/phuonganh-tts-v2
+    supports_streaming: false
+    description: "⭐ Mặc định — Chất lượng cao, yêu cầu GPU NVIDIA/Metal/XPU"
+  "phuonganh-tts-TTS (GPU)":
+    repo: Nemmer/phuonganh-tts-v2
+    supports_streaming: false
+    description: "⭐ Chất lượng cao, yêu cầu GPU/MPS"
+  "phuonganh-tts-TTS-0.3B (GPU)":
+    repo: Nemmer/phuonganh-tts-v2
+    supports_streaming: false
+    description: "⚡ Bản 0.3B tối ưu cho GPU, rất nhanh và chính xác"
+  "phuonganh-tts-TTS-v2 (CPU)":
+    repo: Nemmer/phuonganh-tts-v2
+    supports_streaming: false
+    description: "⚡ Chạy trên CPU — Không cần GPU"
+  "phuonganh-tts-TTS-v2-Turbo (CPU)":
+    repo: Nemmer/phuonganh-tts-v2
+    supports_streaming: true
+    description: "🚀 Turbo v2: Siêu nhanh, hỗ trợ multi-lingual, tối ưu cho CPU & Thiết bị yếu"
+
+codec_configs:
+  "NeuCodec (Distill)":
+    repo: Nemmer/neucodec-onnx-decoder-int8
+    description: "Codec mặc định cho model GPU (LMDeploy)"
+    use_preencoded: false
+  "NeuCodec (ONNX)":
+    repo: Nemmer/neucodec-onnx-decoder-int8
+    description: "Codec ONNX cho CPU và thiết bị yếu"
+    use_preencoded: false
+  "phuonganh-tts-Codec":
+    repo: Nemmer/neucodec-onnx-decoder-int8
+    description: "Codec tối ưu cho Turbo v2 (ONNX)"
+    use_preencoded: false
