@@ -7,7 +7,7 @@ Thư mục này chứa toàn bộ công cụ cần thiết để bạn huấn lu
 Nếu bạn chưa có sẵn mã nguồn, hãy thực hiện cài đặt môi trường:
 
 ```bash
-git clone https://github.com/phuonganh/phuonganh-tts.git
+git clone https://github.com/mvu696841111/PhuongAnh-TTS.git
 cd phuonganh-tts
 uv sync
 ```
