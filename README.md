@@ -240,12 +240,6 @@ cat README.md
 
 ---
 
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mvu696841111/PhuongAnh-TTS&type=Date)](https://star-history.com/#mvu696841111/PhuongAnh-TTS&Date)
-
----
-
 ## 🙏 Acknowledgements
 
 This project uses:
